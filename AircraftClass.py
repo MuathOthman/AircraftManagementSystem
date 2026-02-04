@@ -17,3 +17,6 @@ class Aircraft:
 
     def passenger_count(self) -> int:
         return len(self.passengers)
+
+    def clear_passengers(self):
+        self.passengers.clear()
