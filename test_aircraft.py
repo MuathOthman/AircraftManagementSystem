@@ -36,3 +36,12 @@ def test_boarding_over_capacity():
     plane.board_passenger("Layla")
     assert plane.passenger_count() == 2
     assert plane.passengers == ["Sara", "Muath"]
+
+def test_removing_button():
+    plane = Aircraft("Airbus", 2)
+    plane.board_passenger("Sara")
+    plane.board_passenger("Muath")
+    assert plane.passenger_count() == 2
+    plane.clear_passengers()
+    assert plane.passengers == []
+    assert plane.passenger_count() == 0
