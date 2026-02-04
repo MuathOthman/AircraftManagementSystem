@@ -44,4 +44,4 @@ def test_removing_button():
     assert plane.passenger_count() == 2
     plane.clear_passengers()
     assert plane.passengers == []
-    assert plane.passenger_count() == 1
+    assert plane.passenger_count() == 0
