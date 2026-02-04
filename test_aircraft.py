@@ -34,5 +34,5 @@ def test_boarding_over_capacity():
     plane.board_passenger("Sara")
     plane.board_passenger("Muath")
     plane.board_passenger("Layla")
-    assert plane.passenger_count() == 3
-    assert plane.passengers == ["Sara", "Muath", "Layla"]
+    assert plane.passenger_count() == 2
+    assert plane.passengers == ["Sara", "Muath"]
