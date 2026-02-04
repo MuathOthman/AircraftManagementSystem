@@ -38,11 +38,6 @@ with col1:
             else:
                 st.error("Plane is full ❌ (capacity reached)")
 
-    if st.button("Remove all passengers", type="primary", use_container_width=True):
-        plane.clear_passengers()
-        st.success("All passengers removed 🧹")
-        st.rerun()
-
 
 with col2:
     st.subheader("Status")
