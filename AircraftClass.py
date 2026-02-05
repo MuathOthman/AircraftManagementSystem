@@ -5,13 +5,13 @@ class Aircraft:
         self.passengers = []
 
     def board_passenger(self, passenger: str) -> bool:
-        """Boards passenger if capacity allows. Returns True if boarded, else False."""
         passenger = (passenger or "").strip()
         if not passenger:
             return False
 
         if len(self.passengers) < self.capacity:
-            self.passengers.append(passenger)
+            if passenger not in self.passengers:
+                self.passengers.append(passenger)
             return True
         return False
 

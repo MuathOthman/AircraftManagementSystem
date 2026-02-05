@@ -37,3 +37,9 @@ def test_boarding_over_capacity():
     assert plane.passenger_count() == 2
     assert plane.passengers == ["Sara", "Muath"]
 
+def test_check_the_duplicate_values():
+    plane = Aircraft("B787", 2)
+    plane.board_passenger("Kalle")
+    plane.board_passenger("Kalle")
+    assert plane.passenger_count() == 1
+    assert plane.passengers == ["Kalle"]
