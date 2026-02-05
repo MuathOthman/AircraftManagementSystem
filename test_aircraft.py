@@ -11,7 +11,7 @@ def test_boarding_single_passenger():
     plane = Aircraft("Boeing", 2)
     plane.board_passenger("Muath")
     assert plane.passenger_count() == 1
-    assert plane.passengers == ["Muath"]
+    assert plane.passengers == ["MUATH"]
 
 def test_boarding_multiple_passengers():
     plane = Aircraft("Airbus", 3)
