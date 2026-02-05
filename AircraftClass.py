@@ -10,11 +10,13 @@ class Aircraft:
             return False
 
         if len(self.passengers) < self.capacity:
-            if passenger not in self.passengers:
-                self.passengers.append(passenger)
+            if passenger.upper() not in self.passengers:
+                self.passengers.append(passenger.upper())
             return True
         return False
 
     def passenger_count(self) -> int:
         return len(self.passengers)
 
+    def clear_passengers(self):
+        self.passengers.clear()

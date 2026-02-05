@@ -43,3 +43,11 @@ def test_check_the_duplicate_values():
     plane.board_passenger("Kalle")
     assert plane.passenger_count() == 1
     assert plane.passengers == ["Kalle"]
+
+def test_removing_all_passengers():
+    plane = Aircraft("B787", 2)
+    plane.board_passenger("Kalle")
+    plane.board_passenger("Muath")
+    plane.clear_passengers()
+    assert plane.passenger_count() == 0
+    assert plane.passengers == []
