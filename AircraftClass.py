@@ -10,7 +10,7 @@ class Aircraft:
             return False
 
         if len(self.passengers) < self.capacity:
-            if passenger in self.passengers:
+            if passenger not in self.passengers:
                 self.passengers.append(passenger)
             return True
         return False
